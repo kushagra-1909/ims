@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+}
+.img {
+  background-image: url("images/The\ LNM\ Institute\ of\ Information\ Technology\ -\ [LNMIIT]\,\ Jaipur-2.png");
+  background-size: cover;
+  height: 100vh;
+  width: 60vw;
+}
+
+.components {
+  margin-left: 70vw;
+  padding-top: 10vh;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* background-image: url("images/Screenshot\ 2024-04-24\ at\ 17.39.58.png"); */
+  /* width: 30vw;
+    background-repeat: no-repeat; */
+}
+
+.components img {
+  height: 15vh;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+}
+
+.background {
+  background-color: #1f1e1e;
+}
+h2 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+  margin-left: 7vw;
+}
+.password {
+  margin-top: -1vh;
+}
+.username {
+  margin-top: 2vh;
+}
+.logo button {
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 2vh;
+  padding: 1vh 8vw;
+  border-radius: 28px;
+  background: #ffe600;
+  box-shadow: 5.357px 6.25px 19.017px 8.035px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.logo input {
+  width: 20vw;
+  height: 3vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 28px;
+  border: 5.357px solid #00bcf8;
+  box-shadow: 3.571px 5.357px 14.553px 0px rgba(0, 0, 0, 0.5);
+}

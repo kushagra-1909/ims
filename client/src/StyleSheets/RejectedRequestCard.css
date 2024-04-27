@@ -1,0 +1,31 @@
+.rejected-request-card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: lightcoral;
+}
+
+.rejected-request-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.rejected-request-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.rejected-request-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rejected-request-card li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}

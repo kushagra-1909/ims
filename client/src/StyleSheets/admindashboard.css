@@ -1,0 +1,40 @@
+.Admin-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+}
+
+.Admin-dashboard-header div button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: orange;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.adminDashboardNav {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  margin-left: 5px;
+}
+
+.adminDashboardNav button {
+  padding: 5px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  background-color: rgb(244, 142, 142);
+  cursor: pointer;
+  width: 20%;
+  margin: 5px;
+}
+
+.adminDashboardNav button :hover {
+  color: white;
+}

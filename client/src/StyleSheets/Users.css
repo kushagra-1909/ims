@@ -1,0 +1,13 @@
+.user-card-conatiner-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-card-conatiner-header h5 {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.user-card-conatiner-header div {
+  width: 17%;
+}

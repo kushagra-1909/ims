@@ -1,0 +1,13 @@
+.Item-card-value-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Item-card-value-heading h5 {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Item-card-value-heading div {
+  width: 12.5%;
+}
