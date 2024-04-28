@@ -1,5 +1,8 @@
 import React from "react";
 import "../../../StyleSheets/RejectedRequestCard.css";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFDocument } from "../../FacultyDashboard/PdfDownload";
+
 const RejectedRequestCard = ({ request }) => {
   const { createdBy, dateRequested, Items, message } = request;
   return (
@@ -15,7 +18,12 @@ const RejectedRequestCard = ({ request }) => {
         ))}
       </ul>
       <p>Reason : {message}</p>
-      <button>Generate PDF</button>
+      <PDFDownloadLink
+        document={<PDFDocument Items={Items} />}
+        fileName="userRequestDetail"
+      >
+        <button className="download-pdf">Download PDF</button>
+      </PDFDownloadLink>
     </div>
   );
 };

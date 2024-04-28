@@ -1,7 +1,7 @@
 .user-card {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  border: 1px solid white;
   margin: 2px;
   padding-left: 5px;
   padding-right: 5px;
@@ -10,6 +10,7 @@
 .user-card h5 {
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 .user-card div button {

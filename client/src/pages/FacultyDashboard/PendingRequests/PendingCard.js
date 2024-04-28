@@ -1,4 +1,6 @@
+import { PDFDownloadLink } from "@react-pdf/renderer";
 import React from "react";
+import { PDFDocument } from "../PdfDownload";
 
 const PendingCard = ({ request }) => {
   const { dateRequested, Items } = request;
@@ -13,7 +15,12 @@ const PendingCard = ({ request }) => {
           </li>
         ))}
       </ul>
-      <button>Generate Pdf</button>
+      <PDFDownloadLink
+        document={<PDFDocument Items={Items} />}
+        fileName="userRequestDetail"
+      >
+        <button className="download-pdf">Download PDF</button>
+      </PDFDownloadLink>
     </div>
   );
 };

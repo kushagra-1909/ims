@@ -10,17 +10,6 @@ const UserCard = ({ user }) => {
   // delete api call in backend
   const handleDeleteUser = async () => {
     try {
-      const requestsResponse = await Promise.all(
-        user.requests.map((requestId) => deleteRequest(requestId))
-      );
-      const success = requestsResponse.every(
-        (response) => response.status === "success"
-      );
-      if (success) {
-        message.success("User associated requests deleted successfully");
-      } else {
-        message.error("Failed to delete associated requests");
-      }
       const response = await deleteUser(_id);
       if (response.status === "success") {
         message.success("user deleted successfully");

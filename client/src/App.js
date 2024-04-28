@@ -16,6 +16,7 @@ function App() {
           <Route path="/user-dashboard/:id" element={<FacultyDashboard />} />
           <Route path="/admin-dashboard/:id" element={<AdminDashboard />} />
           <Route path="/user-dashboard/:id/profile" element={<Profile />} />
+          <Route path="/admin-dashboard/:id/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </div>

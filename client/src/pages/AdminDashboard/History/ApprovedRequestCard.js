@@ -1,5 +1,8 @@
 import React from "react";
 import "../../../StyleSheets/ApprovedRequestCard.css";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFDocument } from "../../FacultyDashboard/PdfDownload";
+
 const HistoryRequestCard = ({ request }) => {
   const { createdBy, dateRequested, Items } = request;
   return (
@@ -17,7 +20,12 @@ const HistoryRequestCard = ({ request }) => {
           </li>
         ))}
       </ul>
-      <button>Generate PDF</button>
+      <PDFDownloadLink
+        document={<PDFDocument Items={Items} />}
+        fileName="userRequestDetail"
+      >
+        <button className="download-pdf">Download PDF</button>
+      </PDFDownloadLink>
     </div>
   );
 };
