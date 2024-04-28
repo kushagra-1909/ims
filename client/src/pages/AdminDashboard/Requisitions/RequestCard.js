@@ -162,11 +162,7 @@ const RequestCard = ({ request }) => {
       </div>
       <div className="action">
         <div>
-          <button
-            disabled={!greenTickClicked}
-            onClick={handleApprove}
-            className="approve-btn"
-          >
+          <button onClick={handleApprove} className="approve-btn">
             Approve
           </button>
 

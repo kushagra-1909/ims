@@ -30,7 +30,7 @@ const Requisition = () => {
   }, [pendingRequests]);
 
   return (
-    <div>
+    <div className="Requisition-page">
       <h2>Pending Requests</h2>
       {pendingRequests.map((request) => (
         <RequestCard key={request._id} request={request} />
