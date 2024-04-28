@@ -14,6 +14,7 @@ const RequestCard = ({ request }) => {
   const [msg, setMsg] = useState("");
   const [requestItems, setRequestItems] = useState(Items);
   const [approvedQty, setApprovedQty] = useState(0);
+  const [greenTickClicked, setGreenTickClicked] = useState(false);
 
   const handleApprove = async () => {
     try {
@@ -23,10 +24,21 @@ const RequestCard = ({ request }) => {
       });
       // Decrease item quantity in the database
       for (const item of Items) {
-        await UpdateItem(item.item._id, {
-          availableQuantity:
-            item.item.availableQuantity - item.quantityRequested,
-        });
+        if (item.quantityApproved == 0) {
+          await UpdateItem(item.item._id, {
+            availableQuantity:
+              item.item.availableQuantity - item.quantityRequested,
+          });
+          await editRequest(_id, {
+            [`Items.${Items.indexOf(item)}.quantityApproved`]:
+              item.quantityRequested,
+          });
+        } else {
+          await UpdateItem(item.item._id, {
+            availableQuantity:
+              item.item.availableQuantity - item.quantityApproved,
+          });
+        }
       }
 
       message.success("Request approved successfully");
@@ -132,7 +144,12 @@ const RequestCard = ({ request }) => {
                 <div>
                   {item.item.availableQuantity - item.quantityRequested <
                     item.item.safeDeposit && (
-                    <button onClick={() => partialApprove(index, approvedQty)}>
+                    <button
+                      onClick={() => {
+                        partialApprove(index, approvedQty);
+                        setGreenTickClicked(true);
+                      }}
+                    >
                       ✅
                     </button>
                   )}
@@ -145,7 +162,11 @@ const RequestCard = ({ request }) => {
       </div>
       <div className="action">
         <div>
-          <button onClick={handleApprove} className="approve-btn">
+          <button
+            disabled={!greenTickClicked}
+            onClick={handleApprove}
+            className="approve-btn"
+          >
             Approve
           </button>
 

@@ -10,7 +10,10 @@ const HistoryRequestCard = ({ request }) => {
         {Items.map((item, index) => (
           <li key={index}>
             <span>Item Name: {item.item.itemName} </span>
-            <span>Quantity: {item.quantityRequested}</span>
+            <span>Quantity Requested: {item.quantityRequested}</span>
+            {item.quantityApproved != 0 && (
+              <span>Quantity Approved: {item.quantityApproved}</span>
+            )}
           </li>
         ))}
       </ul>
