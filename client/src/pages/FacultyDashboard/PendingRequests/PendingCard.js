@@ -13,6 +13,7 @@ const PendingCard = ({ request }) => {
           </li>
         ))}
       </ul>
+      <button>Generate Pdf</button>
     </div>
   );
 };

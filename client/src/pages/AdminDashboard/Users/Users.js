@@ -186,13 +186,6 @@ const Users = () => {
 
                 <div>
                   <button type="submit">Submit</button>
-                  <button
-                    onClick={() => {
-                      setShowForm(false);
-                    }}
-                  >
-                    close
-                  </button>
                 </div>
               </Form>
             </div>
@@ -279,13 +272,6 @@ const Users = () => {
                 </Form.Item>
                 <div>
                   <button type="submit">Submit</button>
-                  <button
-                    onClick={() => {
-                      setShowSupplierForm(false);
-                    }}
-                  >
-                    close
-                  </button>
                 </div>
               </Form>
             </div>

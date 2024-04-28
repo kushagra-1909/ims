@@ -160,13 +160,6 @@ const Items = () => {
                 </Form.Item>
                 <div>
                   <button type="submit">Submit</button>
-                  <button
-                    onClick={() => {
-                      setShowForm(false);
-                    }}
-                  >
-                    close
-                  </button>
                 </div>
               </Form>
             </div>

@@ -119,13 +119,6 @@ function CreateNewRequest() {
               <button onClick={handleAddItem}>+ Add Item</button>
             </div>
             <button onClick={handleSubmitRequest}>Send Request</button>
-            <button
-              onClick={() => {
-                setShowForm(false);
-              }}
-            >
-              Close
-            </button>
           </div>
         </div>
       )}

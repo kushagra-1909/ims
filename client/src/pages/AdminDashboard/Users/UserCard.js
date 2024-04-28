@@ -100,13 +100,6 @@ const UserCard = ({ user }) => {
               </Form.Item>
               <div>
                 <button type="submit">Update User</button>
-                <button
-                  onClick={() => {
-                    setShowEditForm(false);
-                  }}
-                >
-                  close
-                </button>
               </div>
             </Form>
           </div>

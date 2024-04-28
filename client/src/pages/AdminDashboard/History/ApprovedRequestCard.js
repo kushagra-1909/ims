@@ -14,6 +14,7 @@ const HistoryRequestCard = ({ request }) => {
           </li>
         ))}
       </ul>
+      <button>Generate PDF</button>
     </div>
   );
 };

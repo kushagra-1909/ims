@@ -15,6 +15,7 @@ const RejectedRequestCard = ({ request }) => {
         ))}
       </ul>
       <p>Reason : {message}</p>
+      <button>Generate PDF</button>
     </div>
   );
 };

@@ -138,13 +138,6 @@ const ItemCard = ({ item }) => {
               </Form.Item>
               <div>
                 <button type="submit">Update Item</button>
-                <button
-                  onClick={() => {
-                    setShowEditForm(false);
-                  }}
-                >
-                  close
-                </button>
               </div>
             </Form>
           </div>
@@ -187,13 +180,6 @@ const ItemCard = ({ item }) => {
               </Form.Item>
               <div>
                 <button type="submit">Place Order</button>
-                <button
-                  onClick={() => {
-                    setShowPlaceOrderForm(false);
-                  }}
-                >
-                  close
-                </button>
               </div>
             </Form>
           </div>

@@ -14,6 +14,7 @@ const ApprovedCard = ({ request }) => {
           </li>
         ))}
       </ul>
+      <button>Generate Pdf</button>
     </div>
   );
 };
