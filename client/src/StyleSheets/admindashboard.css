@@ -34,16 +34,13 @@
   padding: 5px;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
-  border-radius: 5px;
-  background-color: rgb(244, 142, 142);
+  border-radius: 15px;
+  background-color: orange;
   cursor: pointer;
   width: 20%;
   margin: 5px;
 }
 
-.adminDashboardNav button :hover {
+.adminDashboardNav button:hover {
   color: white;
 }
-/* .background-admin{
-  background-color: #440263;
-} */

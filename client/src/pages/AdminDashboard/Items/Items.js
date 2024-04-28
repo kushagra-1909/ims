@@ -42,13 +42,14 @@ const Items = () => {
 
   return (
     <div>
+      <div className="items-display">
       <div className="Add-item-functionality">
-        <button
+        <button className="ADD_ITEM"
           onClick={() => {
             setShowForm(true);
           }}
         >
-          Add Item
+          +Add Item
         </button>
         {showForm && (
           <div className="Add-item-form">
@@ -169,6 +170,7 @@ const Items = () => {
       <div className="Search-item">
         <input type="text" placeholder="Search" />
         <button>Search</button>
+      </div>
       </div>
       <div className="Item-card-value-heading">
         <div>
