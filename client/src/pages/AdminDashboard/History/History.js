@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getRequest } from "../../../apicalls/requests";
 import ApprovedRequestCard from "./ApprovedRequestCard";
 import RejectedRequestCard from "./RejectedRequestCard";
+import "../../../StyleSheets/History.css";
 
 const History = () => {
   const [allApproved, setAllApproved] = useState([]);

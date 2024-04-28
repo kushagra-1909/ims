@@ -23,7 +23,7 @@
 }
 
 .Item-card div button:hover{
-  background-color: goldenrod;
+  background-color: white;
   color: black;
   cursor: pointer;
 }

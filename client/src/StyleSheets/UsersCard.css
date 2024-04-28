@@ -1,20 +1,33 @@
 .user-card {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
-  margin: 2px;
+  border: 1px solid white;
   padding-left: 5px;
   padding-right: 5px;
+  line-height: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .user-card h5 {
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 .user-card div button {
   margin: 5px;
   font-size: 15px;
+  width: 100px;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: #1A87F7;
+  color: white;
+}
+.user-card div button:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
 .user-card div {

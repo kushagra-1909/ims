@@ -4,8 +4,11 @@
 }
 
 .user-card-conatiner-header h5 {
-  font-size: 15px;
+  font-size: 25px;
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin-top: 30px;
+  margin-left: 20px;
 }
 
 .user-card-conatiner-header div {
@@ -30,4 +33,22 @@
   background-color: white;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
+}
+.Add-user-buttons button{
+  border-radius: 20px;
+  width: 15vw;
+  height: 5vh;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  background-color: green;
+  color: black;
+  font-size: 15px;
+  color: white;
+  font-size: 20px;
+}
+.Add-user-buttons button:hover{
+  background-color:white;
+  color:black;
+  cursor: pointer;
 }
