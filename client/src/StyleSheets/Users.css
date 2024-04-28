@@ -11,3 +11,23 @@
 .user-card-conatiner-header div {
   width: 17%;
 }
+
+.add-user-form-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(238, 230, 230, 0.887);
+}
+
+.add-user-form-container {
+  position: fixed;
+  max-width: 30rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}

@@ -77,203 +77,218 @@ const Users = () => {
         </div>
         {showForm && (
           <div className="add-user-form">
-            <Form layout="vertical" onFinish={onFinish}>
-              <Form.Item
-                label="Username"
-                name="username"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input username",
-                  },
-                ]}
-              >
-                <input type="text" placeholder="username" />
-              </Form.Item>
-
-              <Form.Item
-                label="Email"
-                name="email"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input email",
-                  },
-                ]}
-              >
-                <input type="email" placeholder="Email" />
-              </Form.Item>
-
-              <Form.Item
-                label="Password"
-                name="password"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input password!",
-                  },
-                ]}
-              >
-                <input type="password" placeholder="Password" />
-              </Form.Item>
-
-              <Form.Item
-                label="Designation"
-                name="designation"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input designation",
-                  },
-                ]}
-              >
-                <input type="text" placeholder="designation" />
-              </Form.Item>
-
-              <Form.Item
-                label="Department"
-                name="department"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input department of user",
-                  },
-                ]}
-              >
-                <input type="text" placeholder="Department" />
-              </Form.Item>
-
-              <Form.Item
-                label="Phone No."
-                name="mobileNo"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input department of user",
-                  },
-                ]}
-              >
-                <input type="tel" placeholder="Phone No." />
-              </Form.Item>
-
-              <Form.Item
-                label="Office Location"
-                name="officeLocation"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input office Location of user",
-                  },
-                ]}
-              >
-                <input type="text" placeholder="Room No. , Building name" />
-              </Form.Item>
-
-              <Form.Item label="Role" name="role">
-                <p>Default : User , to make admin select Admin </p>
-                <select>
-                  <option>User</option>
-                  <option>Admin</option>
-                  <option>Supplier</option>
-                </select>
-              </Form.Item>
-
-              <div>
-                <button type="submit">Submit</button>
-                <button
-                  onClick={() => {
-                    setShowForm(false);
-                  }}
+            <div
+              onClick={() => {
+                setShowForm(false);
+              }}
+              className="add-user-form-wrapper"
+            ></div>
+            <div className="add-user-form-container">
+              <Form layout="vertical" onFinish={onFinish}>
+                <Form.Item
+                  label="Username"
+                  name="username"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input username",
+                    },
+                  ]}
                 >
-                  close
-                </button>
-              </div>
-            </Form>
+                  <input type="text" placeholder="username" />
+                </Form.Item>
+                <Form.Item
+                  label="Email"
+                  name="email"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input email",
+                    },
+                  ]}
+                >
+                  <input type="email" placeholder="Email" />
+                </Form.Item>
+
+                <Form.Item
+                  label="Password"
+                  name="password"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input password!",
+                    },
+                  ]}
+                >
+                  <input type="password" placeholder="Password" />
+                </Form.Item>
+
+                <Form.Item
+                  label="Designation"
+                  name="designation"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input designation",
+                    },
+                  ]}
+                >
+                  <input type="text" placeholder="designation" />
+                </Form.Item>
+
+                <Form.Item
+                  label="Department"
+                  name="department"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input department of user",
+                    },
+                  ]}
+                >
+                  <input type="text" placeholder="Department" />
+                </Form.Item>
+
+                <Form.Item
+                  label="Phone No."
+                  name="mobileNo"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input department of user",
+                    },
+                  ]}
+                >
+                  <input type="tel" placeholder="Phone No." />
+                </Form.Item>
+
+                <Form.Item
+                  label="Office Location"
+                  name="officeLocation"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input office Location of user",
+                    },
+                  ]}
+                >
+                  <input type="text" placeholder="Room No. , Building name" />
+                </Form.Item>
+
+                <Form.Item label="Role" name="role">
+                  <p>Default : User , to make admin select Admin </p>
+                  <select>
+                    <option>User</option>
+                    <option>Admin</option>
+                    <option>Supplier</option>
+                  </select>
+                </Form.Item>
+
+                <div>
+                  <button type="submit">Submit</button>
+                  <button
+                    onClick={() => {
+                      setShowForm(false);
+                    }}
+                  >
+                    close
+                  </button>
+                </div>
+              </Form>
+            </div>
           </div>
         )}
         {showSupplierForm && (
           <div className="add-supplier-form">
-            <Form layout="vertical" onFinish={onFinish2}>
-              <Form.Item
-                label="Add Supplier Firm"
-                name="username"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input username",
-                  },
-                ]}
-              >
-                <input type="text" placeholder="username" />
-              </Form.Item>
-
-              <Form.Item
-                label="Email"
-                name="email"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input email",
-                  },
-                ]}
-              >
-                <input type="email" placeholder="Email" />
-              </Form.Item>
-
-              <Form.Item
-                label="Password"
-                name="password"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input password!",
-                  },
-                ]}
-              >
-                <input type="password" placeholder="Password" />
-              </Form.Item>
-
-              <Form.Item
-                label="Designation"
-                name="designation"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input designation",
-                  },
-                ]}
-              >
-                <input type="text" placeholder="designation" />
-              </Form.Item>
-
-              <Form.Item
-                label="Department"
-                name="department"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input department of user",
-                  },
-                ]}
-              >
-                <input type="text" placeholder="Department" />
-              </Form.Item>
-
-              <Form.Item label="Role" name="role">
-                <p>default : user , to create admin write : admin</p>
-                <input type="text" placeholder="role" />
-              </Form.Item>
-              <div>
-                <button type="submit">Submit</button>
-                <button
-                  onClick={() => {
-                    setShowSupplierForm(false);
-                  }}
+            <div
+              onClick={() => {
+                setShowSupplierForm(false);
+              }}
+              className="add-user-form-wrapper"
+            ></div>
+            <div className="add-user-form-container">
+              <Form layout="vertical" onFinish={onFinish2}>
+                <Form.Item
+                  label="Add Supplier Firm"
+                  name="username"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input username",
+                    },
+                  ]}
                 >
-                  close
-                </button>
-              </div>
-            </Form>
+                  <input type="text" placeholder="username" />
+                </Form.Item>
+
+                <Form.Item
+                  label="Email"
+                  name="email"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input email",
+                    },
+                  ]}
+                >
+                  <input type="email" placeholder="Email" />
+                </Form.Item>
+
+                <Form.Item
+                  label="Password"
+                  name="password"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input password!",
+                    },
+                  ]}
+                >
+                  <input type="password" placeholder="Password" />
+                </Form.Item>
+
+                <Form.Item
+                  label="Designation"
+                  name="designation"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input designation",
+                    },
+                  ]}
+                >
+                  <input type="text" placeholder="designation" />
+                </Form.Item>
+
+                <Form.Item
+                  label="Department"
+                  name="department"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input department of user",
+                    },
+                  ]}
+                >
+                  <input type="text" placeholder="Department" />
+                </Form.Item>
+
+                <Form.Item label="Role" name="role">
+                  <p>default : user , to create admin write : admin</p>
+                  <input type="text" placeholder="role" />
+                </Form.Item>
+                <div>
+                  <button type="submit">Submit</button>
+                  <button
+                    onClick={() => {
+                      setShowSupplierForm(false);
+                    }}
+                  >
+                    close
+                  </button>
+                </div>
+              </Form>
+            </div>
           </div>
         )}
       </div>

@@ -52,118 +52,124 @@ const Items = () => {
         </button>
         {showForm && (
           <div className="Add-item-form">
-            <Form layout="vertical" onFinish={onFinish}>
-              <Form.Item
-                label="Item Name"
-                name="itemName"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input ItemName",
-                  },
-                ]}
-              >
-                <input type="text" placeholder="itemName" />
-              </Form.Item>
-
-              <Form.Item
-                label="Available Quantity"
-                name="availableQuantity"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input Available Quantity",
-                  },
-                ]}
-              >
-                <input type="number" placeholder="Available Quantity" />
-              </Form.Item>
-
-              <Form.Item
-                label="Safe Deposit"
-                name="safeDeposit"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input Safe Deposit",
-                  },
-                ]}
-              >
-                <input type="number" placeholder="Safe Deposite" />
-              </Form.Item>
-
-              <Form.Item
-                label="Type"
-                name="type"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input type",
-                  },
-                ]}
-              >
-                <select>
-                  <option disabled selected>
-                    Select-type
-                  </option>
-                  <option>consumable</option>
-                  <option>non-consumable</option>
-                </select>
-              </Form.Item>
-
-              <Form.Item
-                label="Category"
-                name="category"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input category of item",
-                  },
-                ]}
-              >
-                <select>
-                  <option disabled selected>
-                    Select-category
-                  </option>
-                  <option>Pen</option>
-                  <option>Marker</option>
-                  <option>File</option>
-                  <option>Stapler</option>
-                  <option>Paper Rim </option>
-                  <option>Eraser</option>
-                  <option>Pin</option>
-                  <option>Remote Cell</option>
-                  <option>Scissor</option>
-                  <option>Cutter</option>
-                  <option>inkPad</option>
-                  <option>Punch Machine</option>
-                  <option>Cellotap</option>
-                  <option>Cartridge</option>
-                  <option>Paper</option>
-                  <option>Duster</option>
-                  <option>Chalk</option>
-                  <option>Marker</option>
-                  <option>Clip</option>
-                  <option>Files</option>
-                  <option>Electronics</option>
-                  <option>Fevicol</option>
-                </select>
-              </Form.Item>
-
-              <Form.Item label="Expiry Date" name="expiryDate">
-                <input type="date" placeholder="expiryDate" />
-              </Form.Item>
-              <div>
-                <button type="submit">Submit</button>
-                <button
-                  onClick={() => {
-                    setShowForm(false);
-                  }}
+            <div
+              onClick={() => setShowForm(false)}
+              className="form-wrapper"
+            ></div>
+            <div className="Form-container">
+              <Form layout="vertical" onFinish={onFinish}>
+                <Form.Item
+                  label="Item Name"
+                  name="itemName"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input ItemName",
+                    },
+                  ]}
                 >
-                  close
-                </button>
-              </div>
-            </Form>
+                  <input type="text" placeholder="itemName" />
+                </Form.Item>
+
+                <Form.Item
+                  label="Available Quantity"
+                  name="availableQuantity"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input Available Quantity",
+                    },
+                  ]}
+                >
+                  <input type="number" placeholder="Available Quantity" />
+                </Form.Item>
+
+                <Form.Item
+                  label="Safe Deposit"
+                  name="safeDeposit"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input Safe Deposit",
+                    },
+                  ]}
+                >
+                  <input type="number" placeholder="Safe Deposite" />
+                </Form.Item>
+
+                <Form.Item
+                  label="Type"
+                  name="type"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input type",
+                    },
+                  ]}
+                >
+                  <select>
+                    <option disabled selected>
+                      Select-type
+                    </option>
+                    <option>consumable</option>
+                    <option>non-consumable</option>
+                  </select>
+                </Form.Item>
+
+                <Form.Item
+                  label="Category"
+                  name="category"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please input category of item",
+                    },
+                  ]}
+                >
+                  <select>
+                    <option disabled selected>
+                      Select-category
+                    </option>
+                    <option>Pen</option>
+                    <option>Marker</option>
+                    <option>File</option>
+                    <option>Stapler</option>
+                    <option>Paper Rim </option>
+                    <option>Eraser</option>
+                    <option>Pin</option>
+                    <option>Remote Cell</option>
+                    <option>Scissor</option>
+                    <option>Cutter</option>
+                    <option>inkPad</option>
+                    <option>Punch Machine</option>
+                    <option>Cellotap</option>
+                    <option>Cartridge</option>
+                    <option>Paper</option>
+                    <option>Duster</option>
+                    <option>Chalk</option>
+                    <option>Marker</option>
+                    <option>Clip</option>
+                    <option>Files</option>
+                    <option>Electronics</option>
+                    <option>Fevicol</option>
+                  </select>
+                </Form.Item>
+
+                <Form.Item label="Expiry Date" name="expiryDate">
+                  <input type="date" placeholder="expiryDate" />
+                </Form.Item>
+                <div>
+                  <button type="submit">Submit</button>
+                  <button
+                    onClick={() => {
+                      setShowForm(false);
+                    }}
+                  >
+                    close
+                  </button>
+                </div>
+              </Form>
+            </div>
           </div>
         )}
       </div>

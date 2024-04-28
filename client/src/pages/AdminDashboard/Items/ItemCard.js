@@ -46,35 +46,57 @@ const ItemCard = ({ item }) => {
   const placeOrder = async (values) => {};
 
   return (
-    <div className="Item-card">
-      <div>
-        <h5>{itemName}</h5>
+    <div>
+      <div className="Item-card">
+        <div>
+          <h5>{itemName}</h5>
+        </div>
+        <div>
+          <h5>{availableQuantity}</h5>
+        </div>
+        <div>
+          <h5>{safeDeposit}</h5>
+        </div>
+        <div>
+          <h5>{category}</h5>
+        </div>
+        <div>
+          <h5>{expiryDate}</h5>
+        </div>
+        <div>
+          <h5>{type}</h5>
+        </div>
+        <div>
+          <button
+            onClick={() => {
+              setShowEditForm(true);
+            }}
+          >
+            Edit
+          </button>
+          <button onClick={handleDeleteItem}>Delete</button>
+          {availableQuantity <= safeDeposit && (
+            <div className="item-card-place-order">
+              <button
+                onClick={() => {
+                  setShowPlaceOrderForm(true);
+                }}
+              >
+                Place Order
+              </button>
+            </div>
+          )}
+        </div>
       </div>
-      <div>
-        <h5>{availableQuantity}</h5>
-      </div>
-      <div>
-        <h5>{safeDeposit}</h5>
-      </div>
-      <div>
-        <h5>{category}</h5>
-      </div>
-      <div>
-        <h5>{expiryDate}</h5>
-      </div>
-      <div>
-        <h5>{type}</h5>
-      </div>
-      <div>
-        <button
-          onClick={() => {
-            setShowEditForm(true);
-          }}
-        >
-          Edit
-        </button>
-        {showEditForm && (
-          <div className="Edit-item-form">
+      {showEditForm && (
+        <div>
+          <div
+            onClick={() => {
+              setShowEditForm(false);
+            }}
+            className="Edit-item-form-wrapper"
+          ></div>
+          <div className="Edit-item-form-container">
             <Form layout="vertical" onFinish={onFinish}>
               <Form.Item label="Item Name" name="itemName">
                 <input type="text" placeholder="itemName" />
@@ -126,61 +148,57 @@ const ItemCard = ({ item }) => {
               </div>
             </Form>
           </div>
-        )}
-        <button onClick={handleDeleteItem}>Delete</button>
-        {availableQuantity <= safeDeposit && (
-          <div className="item-card-place-order">
-            <button
-              onClick={() => {
-                setShowPlaceOrderForm(true);
-              }}
-            >
-              Place Order
-            </button>
-            {showPlaceOrderForm && (
-              <div className="Place-order-form">
-                <Form layout="vertical" onFinish={placeOrder}>
-                  <Form.Item
-                    label="Supplier Firm Name"
-                    name="supplierName"
-                    rules={[
-                      {
-                        required: true,
-                        message: "Please input supplier firm name",
-                      },
-                    ]}
-                  >
-                    <input type="text" placeholder="Supplier name" />
-                  </Form.Item>
+        </div>
+      )}
+      {showPlaceOrderForm && (
+        <div>
+          <div
+            onClick={() => {
+              setShowPlaceOrderForm(false);
+            }}
+            className="place-order-wrapper"
+          ></div>
+          <div className="place-order-container">
+            <Form layout="vertical" onFinish={placeOrder}>
+              <Form.Item
+                label="Supplier Firm Name"
+                name="supplierName"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input supplier firm name",
+                  },
+                ]}
+              >
+                <input type="text" placeholder="Supplier name" />
+              </Form.Item>
 
-                  <Form.Item
-                    label="Quantity"
-                    name="quantity"
-                    rules={[
-                      {
-                        required: true,
-                        message: "Please input quantity of item",
-                      },
-                    ]}
-                  >
-                    <input type="number" placeholder="quantity" />
-                  </Form.Item>
-                  <div>
-                    <button type="submit">Place Order</button>
-                    <button
-                      onClick={() => {
-                        setShowPlaceOrderForm(false);
-                      }}
-                    >
-                      close
-                    </button>
-                  </div>
-                </Form>
+              <Form.Item
+                label="Quantity"
+                name="quantity"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input quantity of item",
+                  },
+                ]}
+              >
+                <input type="number" placeholder="quantity" />
+              </Form.Item>
+              <div>
+                <button type="submit">Place Order</button>
+                <button
+                  onClick={() => {
+                    setShowPlaceOrderForm(false);
+                  }}
+                >
+                  close
+                </button>
               </div>
-            )}
+            </Form>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

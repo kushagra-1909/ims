@@ -36,32 +36,43 @@ const UserCard = ({ user }) => {
   };
 
   return (
-    <div className="user-card">
-      <div>
-        <h5>{username}</h5>
+    <div>
+      <div className="user-card">
+        <div>
+          <h5>{username}</h5>
+        </div>
+        <div>
+          <h5>{email}</h5>
+        </div>
+        <div>
+          <h5>{designation}</h5>
+        </div>
+        <div>
+          <h5>{department}</h5>
+        </div>
+        <div>
+          <h5>{role}</h5>
+        </div>
+        <div className="user-card-action-buttons">
+          <button
+            onClick={() => {
+              setShowEditForm(true);
+            }}
+          >
+            Edit
+          </button>
+          <button onClick={handleDeleteUser}>Delete</button>
+        </div>
       </div>
-      <div>
-        <h5>{email}</h5>
-      </div>
-      <div>
-        <h5>{designation}</h5>
-      </div>
-      <div>
-        <h5>{department}</h5>
-      </div>
-      <div>
-        <h5>{role}</h5>
-      </div>
-      <div className="user-card-action-buttons">
-        <button
-          onClick={() => {
-            setShowEditForm(true);
-          }}
-        >
-          Edit
-        </button>
-        {showEditForm && (
-          <div className="user-edit-form">
+      {showEditForm && (
+        <div>
+          <div
+            onClick={() => {
+              setShowEditForm(false);
+            }}
+            className="user-edit-form-wrapper"
+          ></div>
+          <div className="user-edit-form-container">
             <Form layout="vertical" onFinish={onFinish}>
               <Form.Item label="Username" name="username">
                 <input type="text" placeholder="username" />
@@ -99,9 +110,8 @@ const UserCard = ({ user }) => {
               </div>
             </Form>
           </div>
-        )}
-        <button onClick={handleDeleteUser}>Delete</button>
-      </div>
+        </div>
+      )}
     </div>
   );
 };

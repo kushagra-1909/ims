@@ -18,3 +18,43 @@
 .Item-card div {
   width: 12.5%;
 }
+
+.Edit-item-form-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(238, 230, 230, 0.887);
+}
+
+.Edit-item-form-container {
+  position: fixed;
+  max-width: 30rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.place-order-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(238, 230, 230, 0.887);
+}
+
+.place-order-container {
+  position: fixed;
+  max-width: 30rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}

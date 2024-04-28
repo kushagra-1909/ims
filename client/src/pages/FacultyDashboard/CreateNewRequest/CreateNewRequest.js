@@ -83,42 +83,50 @@ function CreateNewRequest() {
         Create New Request
       </button>
       {showForm && (
-        <div className="request-form">
-          <div className="item-group">
-            {items.map((item, index) => (
-              <div key={index} className="item-input">
-                <select
-                  name="item"
-                  value={item.item}
-                  onChange={(e) => handleItemChange(index, e)}
-                  required
-                >
-                  <option value="">Select Item</option>
-                  {allItems.map((item) => (
-                    <option key={item._id} value={item._id}>
-                      {item.itemName}
-                    </option>
-                  ))}
-                </select>
-                <input
-                  type="number"
-                  name="quantityRequested"
-                  value={item.quantityRequested}
-                  onChange={(e) => handleItemChange(index, e)}
-                  required
-                />
-              </div>
-            ))}
-            <button onClick={handleAddItem}>+ Add Item</button>
-          </div>
-          <button onClick={handleSubmitRequest}>Send Request</button>
-          <button
+        <div>
+          <div
             onClick={() => {
               setShowForm(false);
             }}
-          >
-            Close
-          </button>
+            className="request-form-wrapper"
+          ></div>
+          <div className="request-form">
+            <div className="item-group">
+              {items.map((item, index) => (
+                <div key={index} className="item-input">
+                  <select
+                    name="item"
+                    value={item.item}
+                    onChange={(e) => handleItemChange(index, e)}
+                    required
+                  >
+                    <option value="">Select Item</option>
+                    {allItems.map((item) => (
+                      <option key={item._id} value={item._id}>
+                        {item.itemName}
+                      </option>
+                    ))}
+                  </select>
+                  <input
+                    type="number"
+                    name="quantityRequested"
+                    value={item.quantityRequested}
+                    onChange={(e) => handleItemChange(index, e)}
+                    required
+                  />
+                </div>
+              ))}
+              <button onClick={handleAddItem}>+ Add Item</button>
+            </div>
+            <button onClick={handleSubmitRequest}>Send Request</button>
+            <button
+              onClick={() => {
+                setShowForm(false);
+              }}
+            >
+              Close
+            </button>
+          </div>
         </div>
       )}
     </div>
