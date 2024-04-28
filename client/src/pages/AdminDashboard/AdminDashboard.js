@@ -38,6 +38,7 @@ const AdminDashboard = () => {
   }, []);
 
   return (
+    <div className="background-admin">
     <div>
       <div className="Admin-dashboard-header">
         <h1>Welcome {userDetails.username}</h1>
@@ -62,6 +63,7 @@ const AdminDashboard = () => {
       {activeSection === "users" && <Users />}
       {activeSection === "history" && <History />}
       {activeSection === "orders" && <Orders />}
+    </div>
     </div>
   );
 };

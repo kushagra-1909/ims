@@ -1,11 +1,16 @@
 .Admin-dashboard-header {
   display: flex;
   justify-content: space-between;
+  height: 10vh;
   margin-bottom: 10px;
   border: 1px solid black;
-  border-radius: 10px;
-  background-color: palevioletred;
+  background: #000;
   color: white;
+}
+.Admin-dashboard-header h1{
+  margin-left: 0;
+  font-size: 5vh;
+  margin-top: 2vh;
 }
 
 .Admin-dashboard-header div button {
@@ -22,6 +27,7 @@
   justify-content: space-between;
   margin: 20px;
   margin-left: 5px;
+  
 }
 
 .adminDashboardNav button {
@@ -38,3 +44,6 @@
 .adminDashboardNav button :hover {
   color: white;
 }
+/* .background-admin{
+  background-color: #440263;
+} */

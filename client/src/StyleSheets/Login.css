@@ -25,21 +25,21 @@
   margin-left: 30px;
 }
 
-.background {
+.background-login{
   background-color: #1f1e1e;
 }
-h2 {
+.background-login h2 {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-h1 {
+.background-login h1 {
   margin-left: 7vw;
 }
-.password {
-  margin-top: -1vh;
-}
+/* .password {
+  margin-top: 2vh; 
+} */
 .username {
-  margin-top: 2vh;
+  margin-top: 4vh;
 }
 .logo button {
   font-size: x-large;
@@ -54,6 +54,7 @@ h1 {
 .logo input {
   width: 20vw;
   height: 3vh;
+  margin-bottom: 2vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 28px;
   border: 5.357px solid #00bcf8;

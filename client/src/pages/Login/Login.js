@@ -36,7 +36,7 @@ function Login() {
 
   return (
     <div className="logo">
-      <div className="background">
+      <div className="background-login">
         <div className="img">
           <div className="components">
             <img src={logo1} />

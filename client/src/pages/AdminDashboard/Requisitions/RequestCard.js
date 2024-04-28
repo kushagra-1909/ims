@@ -88,6 +88,7 @@ const RequestCard = ({ request }) => {
   };
 
   return (
+    <div className="fullbackground">
     <div className="request-card">
       <div>
         <h3> {createdBy.username}</h3>
@@ -207,6 +208,7 @@ const RequestCard = ({ request }) => {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 };
