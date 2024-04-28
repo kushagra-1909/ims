@@ -1,6 +1,6 @@
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import React from "react";
-import { PDFDocument } from "./PdfDownload";
+import { PDFDocument } from "../PdfDownload";
 
 const ApprovedCard = ({ request }) => {
   const { dateRequested, Items } = request;

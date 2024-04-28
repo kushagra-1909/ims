@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import CreateNewRequest from "./CreateNewRequest/CreateNewRequest";
 
 import "../../StyleSheets/CreateNewRequest.css";
-import { useNavigate } from "react-router-dom";
 import { GetLoggedInUserDetails } from "../../apicalls/users";
 import { message } from "antd";
 import PendingCard from "./PendingRequests/PendingCard";
@@ -14,8 +13,6 @@ const FacultyDashboard = () => {
   const [activeSection, setActiveSection] = useState("CreateNewRequest");
   const [userDetails, setUserDetails] = useState({});
   const [request, setRequest] = useState({});
-
-  const navigate = useNavigate();
 
   //   const { data: userDetailsT, isLoading: userDetailsLoading } = useQuery({
   //     key: PLATFORM_ENDPOINTS.lastRanJobStatus,

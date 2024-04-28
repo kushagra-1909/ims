@@ -1,4 +1,6 @@
+import { PDFDownloadLink } from "@react-pdf/renderer";
 import React from "react";
+import { PDFDocument } from "../PdfDownload";
 
 const RejectedCard = ({ request }) => {
   const { dateRequested, Items, message } = request;
@@ -14,7 +16,12 @@ const RejectedCard = ({ request }) => {
         ))}
       </ul>
       <p>Reason : {message}</p>
-      <button>Generate Pdf</button>
+      <PDFDownloadLink
+        document={<PDFDocument Items={Items} />}
+        fileName="userRequestDetail"
+      >
+        <button className="download-pdf">Download PDF</button>
+      </PDFDownloadLink>
     </div>
   );
 };

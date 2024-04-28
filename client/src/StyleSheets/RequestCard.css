@@ -1,6 +1,6 @@
-body{
- background-color: #1B0128 ;
- /* background-color: #2A023D  ; */
+body {
+  background-color: #1b0128;
+  /* background-color: #2A023D  ; */
 }
 .request-card {
   display: flex;
@@ -8,15 +8,11 @@ body{
   border: 1px solid #ccc;
   border-radius: 30px;
   opacity: 0.9;
-  box-shadow: -28px 18px 24.6px 1px rgba(48, 48, 48, 0.50);
-  
-
+  box-shadow: -28px 18px 24.6px 1px rgba(48, 48, 48, 0.5);
   padding: 20px;
   color: white;
   margin-bottom: 20px;
-  
 }
-
 
 .request-card h3 {
   font-size: 18px;
@@ -130,7 +126,7 @@ body{
   margin-top: 20px;
   font-size: 17px;
 }
-.requisition-color h2{
+.requisition-color h2 {
   color: white;
   margin-bottom: 2vh;
 }

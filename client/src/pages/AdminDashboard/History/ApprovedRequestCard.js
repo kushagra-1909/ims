@@ -1,5 +1,8 @@
 import React from "react";
 import "../../../StyleSheets/ApprovedRequestCard.css";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFDocument } from "../../FacultyDashboard/PdfDownload";
+
 const HistoryRequestCard = ({ request }) => {
   const { createdBy, dateRequested, Items } = request;
   return (

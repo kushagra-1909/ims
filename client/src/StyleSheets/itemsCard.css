@@ -1,7 +1,7 @@
 .Item-card {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #E7E5E5;
+  border: 1px solid #e7e5e5;
   padding-left: 30px;
   margin-left: 20px;
   margin-right: 20px;
@@ -18,7 +18,7 @@
   width: 100px;
   font-size: 15px;
   border-radius: 10px;
-  background-color: #1A87F7;
+  background-color: #1a87f7;
   color: white;
 }
 

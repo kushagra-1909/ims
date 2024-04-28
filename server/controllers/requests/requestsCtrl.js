@@ -62,7 +62,7 @@ const getRequestCtrl = async (req, res, next) => {
 const deleteRequestCtrl = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const request = await Request.findByIdAndDelete(id);
+    await Request.findByIdAndDelete(id);
     res.status(200).json({
       status: "success",
       data: null,
