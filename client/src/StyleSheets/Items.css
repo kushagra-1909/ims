@@ -4,8 +4,11 @@
 }
 
 .Item-card-value-heading h5 {
-  font-size: 15px;
+  margin-top: 30px;
+  margin-left: 30px;
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 .Item-card-value-heading div {
@@ -30,4 +33,44 @@
   background-color: white;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
+}
+.Search-item input{
+  border: 5.357px solid #00bcf8;
+  box-shadow: 3.571px 5.357px 14.553px 0px rgba(0, 0, 0, 0.5);
+  width: 20vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 28px;
+  height: 3vh;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+.Search-item button{
+border-radius: 20px;
+width: 4vw;
+height: 5vh;
+margin-left: 0.5vw;
+background-color: #1A87F7;
+  color: black;
+  font-size: 15px;
+  margin-top: 15px;
+}
+.Search-item button:hover{
+  color: white;
+  cursor: pointer;
+}
+.ADD_ITEM{
+  border-radius: 20px;
+  width: 15vw;
+  height: 5vh;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  background-color: green;
+  color: black;
+  font-size: 15px;
+  color: white;
+  font-size: 20px;
+}
+.items-display{
+  display: flex;
 }
