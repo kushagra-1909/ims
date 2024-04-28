@@ -38,7 +38,7 @@ const AdminDashboard = () => {
   }, []);
 
   return (
-    <div className="full-admin-page">
+    <div>
       <div className="Admin-dashboard-header">
         <h1>Welcome {userDetails.username}</h1>
         <div>
