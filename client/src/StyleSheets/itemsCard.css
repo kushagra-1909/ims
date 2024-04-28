@@ -22,8 +22,8 @@
   color: white;
 }
 
-.Item-card div button:hover {
-  background-color: goldenrod;
+.Item-card div button:hover{
+  background-color: white;
   color: black;
   cursor: pointer;
 }

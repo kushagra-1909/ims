@@ -50,12 +50,13 @@ width: 4vw;
 height: 5vh;
 margin-left: 0.5vw;
 background-color: #1A87F7;
-  color: black;
+  color: white;
   font-size: 15px;
   margin-top: 15px;
 }
 .Search-item button:hover{
-  color: white;
+  background-color: white;
+  color:black;
   cursor: pointer;
 }
 .ADD_ITEM{
@@ -70,6 +71,11 @@ background-color: #1A87F7;
   font-size: 15px;
   color: white;
   font-size: 20px;
+}
+.ADD_ITEM:hover{
+  background-color:white;
+  color:black;
+  cursor: pointer;
 }
 .items-display{
   display: flex;

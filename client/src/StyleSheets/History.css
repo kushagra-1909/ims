@@ -1,0 +1,13 @@
+.History-nav button{
+    border-radius: 20px;
+  width: 15vw;
+  height: 5vh;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  background-color:  #1A87F7;
+  color: black;
+  font-size: 15px;
+  color: white;
+  font-size: 20px;
+}

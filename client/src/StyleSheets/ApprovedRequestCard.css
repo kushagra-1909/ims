@@ -29,3 +29,42 @@
   font-size: 14px;
   margin-bottom: 5px;
 }
+
+.approved-request-card{
+  display: flex;
+}
+
+.approved-request-card-item-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.approved-request-card-item-header div {
+  margin: 15px;
+  width: 25%;
+}
+
+.approved-request-card-item-header span {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.approved-request-items-content ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.approved-request-items-content ul li div {
+  margin-right: 10px;
+  margin-left: 25px;
+  width: 25%;
+  display: flex;
+}
+
+.approved-request-items-content ul li div span {
+  margin-top: 5px;
+}
+
+.approved-request-card-action-container{
+   : center;
+}
