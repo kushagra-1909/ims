@@ -29,3 +29,38 @@
   font-size: 14px;
   margin-bottom: 5px;
 }
+
+.rejected-request-card {
+  display: flex;
+}
+
+.rejected-request-card-item-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rejected-request-card-item-header div {
+  margin: 15px;
+  width: 25%;
+}
+
+.rejected-request-card-item-header span {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.rejected-request-items-content ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rejected-request-items-content ul li div {
+  margin-right: 10px;
+  margin-left: 25px;
+  width: 25%;
+  display: flex;
+}
+
+.rejected-request-items-content ul li div span {
+  margin-top: 5px;
+}
