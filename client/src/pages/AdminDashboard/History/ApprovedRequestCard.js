@@ -45,6 +45,14 @@ const HistoryRequestCard = ({ request }) => {
             </ul>
         </div>
       </div>
+      <div className="approved-request-card-action-container">
+          <PDFDownloadLink
+            document={<PDFDocument Items={Items} />}
+            fileName="userRequestDetail"
+          >
+            <button className="download-pdf">Download PDF</button>
+          </PDFDownloadLink>
+      </div>
     </div>
   );
 };
