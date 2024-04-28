@@ -179,7 +179,7 @@ const ItemCard = ({ item }) => {
                 <input type="number" placeholder="quantity" />
               </Form.Item>
               <div>
-                <button type="submit">Place Order</button>
+                <button type="submit">Add to Cart</button>
               </div>
             </Form>
           </div>

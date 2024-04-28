@@ -5,7 +5,6 @@ import { LoginUser } from "../../apicalls/users";
 import ReCAPTCHA from "react-google-recaptcha";
 import "../../StyleSheets/Login.css";
 import logo1 from "../../StyleSheets/images/logo1.png";
-import logo2 from "../../StyleSheets/images/logo2.png";
 
 function Login() {
   const [isChecked, setIsChecked] = useState(false);
@@ -40,7 +39,6 @@ function Login() {
         <div className="img">
           <div className="components">
             <img src={logo1} />
-            {/* <img className="wad" src={logo2}/> */}
             <h1 className="">LOGIN</h1>
             <Form layout="vertical" onFinish={onFinish}>
               <h2 className="username">Username</h2>

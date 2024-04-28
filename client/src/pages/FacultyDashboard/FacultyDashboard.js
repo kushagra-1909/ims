@@ -17,11 +17,6 @@ const FacultyDashboard = () => {
 
   const navigate = useNavigate();
 
-  const logout = () => {
-    localStorage.removeItem("token");
-    navigate("/");
-  };
-
   //   const { data: userDetailsT, isLoading: userDetailsLoading } = useQuery({
   //     key: PLATFORM_ENDPOINTS.lastRanJobStatus,
   //     dependency: {
