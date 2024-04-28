@@ -37,13 +37,13 @@ const styles = StyleSheet.create({
     borderBottom: "1 solid #000",
   },
   columnHeader: {
-    width: "33.33%",
+    width: "25%",
     backgroundColor: "#f0f0f0",
     padding: 5,
     fontWeight: "bold",
   },
   cell: {
-    width: "33.33%",
+    width: "25%",
     padding: 5,
   },
 });
@@ -54,7 +54,8 @@ const Table = ({ data }) => (
     <View style={styles.tableRow}>
       <Text style={styles.columnHeader}>S. no.</Text>
       <Text style={styles.columnHeader}>Item Name</Text>
-      <Text style={styles.columnHeader}>Quantity</Text>
+      <Text style={styles.columnHeader}>Quantity Requested</Text>
+      <Text style={styles.columnHeader}>Quantity Approved</Text>
     </View>
     {/* {console.log("data: ",data)} */}
     {data.map((row, index) => (
@@ -62,6 +63,7 @@ const Table = ({ data }) => (
         <Text style={styles.cell}>{index + 1}</Text>
         <Text style={styles.cell}>{row.item.itemName}</Text>
         <Text style={styles.cell}>{row.quantityRequested}</Text>
+        <Text style={styles.cell}>{row.quantityApproved}</Text>
       </View>
     ))}
   </View>
