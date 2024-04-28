@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../StyleSheets/ApprovedRequestCard.css";
 const HistoryRequestCard = ({ request }) => {
-  const { _id, createdBy, dateRequested, Items } = request;
+  const { createdBy, dateRequested, Items } = request;
   return (
     <div className="approved-request-card">
       <h3>Faculty: {createdBy.username}</h3>
@@ -11,7 +11,7 @@ const HistoryRequestCard = ({ request }) => {
           <li key={index}>
             <span>Item Name: {item.item.itemName} </span>
             <span>Quantity Requested: {item.quantityRequested}</span>
-            {item.quantityApproved != 0 && (
+            {item.quantityApproved !== 0 && (
               <span>Quantity Approved: {item.quantityApproved}</span>
             )}
           </li>

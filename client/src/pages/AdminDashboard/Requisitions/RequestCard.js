@@ -14,7 +14,6 @@ const RequestCard = ({ request }) => {
   const [msg, setMsg] = useState("");
   const [requestItems, setRequestItems] = useState(Items);
   const [approvedQty, setApprovedQty] = useState(0);
-  const [greenTickClicked, setGreenTickClicked] = useState(false);
 
   const handleApprove = async () => {
     try {
@@ -24,7 +23,7 @@ const RequestCard = ({ request }) => {
       });
       // Decrease item quantity in the database
       for (const item of Items) {
-        if (item.quantityApproved == 0) {
+        if (item.quantityApproved === 0) {
           await UpdateItem(item.item._id, {
             availableQuantity:
               item.item.availableQuantity - item.quantityRequested,
@@ -47,10 +46,10 @@ const RequestCard = ({ request }) => {
     }
   };
 
-  const handleDecline = async (values) => {
+  const handleDecline = async () => {
     try {
       // Update request status to "rejected"
-      await editRequest(_id, { status: "rejected", message: msg });
+      await editRequest(_id, { status: "rejected", messages: msg });
       message.success("Request declined successfully");
     } catch (error) {
       message.error("Failed to decline request");
@@ -147,7 +146,6 @@ const RequestCard = ({ request }) => {
                     <button
                       onClick={() => {
                         partialApprove(index, approvedQty);
-                        setGreenTickClicked(true);
                       }}
                     >
                       ✅
@@ -181,24 +179,25 @@ const RequestCard = ({ request }) => {
         </div>
 
         {showDeclinedInput && (
-          <div className="decline-request-form">
-            <input
-              type="text"
-              placeholder="type message"
-              onChange={(e) => setMsg(e.target.value)}
-              required
-            />
-            <div>
-              <button type="submit" onClick={handleDecline}>
-                send
-              </button>
-              <button
-                onClick={() => {
-                  setShowDeclinedInput(false);
-                }}
-              >
-                close
-              </button>
+          <div>
+            <div
+              onClick={() => {
+                setShowDeclinedInput(false);
+              }}
+              className="decline-request-wrapper"
+            ></div>
+            <div className="decline-request-container">
+              <input
+                type="text"
+                placeholder="type message"
+                onChange={(e) => setMsg(e.target.value)}
+                required
+              />
+              <div>
+                <button type="submit" onClick={handleDecline}>
+                  send
+                </button>
+              </div>
             </div>
           </div>
         )}

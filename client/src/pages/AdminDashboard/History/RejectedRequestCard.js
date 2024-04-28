@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../StyleSheets/RejectedRequestCard.css";
 const RejectedRequestCard = ({ request }) => {
-  const { _id, createdBy, dateRequested, Items, message } = request;
+  const { createdBy, dateRequested, Items, message } = request;
   return (
     <div className="rejected-request-card">
       <h3>Faculty: {createdBy.username}</h3>
