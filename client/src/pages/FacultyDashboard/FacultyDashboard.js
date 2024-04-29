@@ -96,21 +96,21 @@ const FacultyDashboard = () => {
       {activeSection === "PendingRequest" && (
         <div>
           {request?.pending.map((request) => (
-            <PendingCard key={request._id} request={request} />
+            <PendingCard key={request._id} request={request} userDetails= {userDetails}/>
           ))}
         </div>
       )}
       {activeSection === "ApprovedRequest" && (
         <div>
           {request?.approved.map((request) => (
-            <ApprovedCard key={request._id} request={request} />
+            <ApprovedCard key={request._id} request={request} userDetails= {userDetails}/>
           ))}
         </div>
       )}
       {activeSection === "RejectedRequest" && (
         <div>
           {request?.rejected.map((request) => (
-            <RejectedCard key={request._id} request={request} />
+            <RejectedCard key={request._id} request={request} userDetails= {userDetails}/>
           ))}
         </div>
       )}

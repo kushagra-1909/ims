@@ -11,7 +11,7 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 import { PDFDocument } from "../../FacultyDashboard/PdfDownload";
 
 const RequestCard = ({ request }) => {
-  const { _id, createdBy, dateRequested, Items, messages } = request;
+  const { _id, createdBy, dateRequested, Items} = request;
   const [showDeclinedInput, setShowDeclinedInput] = useState(false);
   const [msg, setMsg] = useState("");
   const [requestItems, setRequestItems] = useState(Items);
@@ -51,7 +51,7 @@ const RequestCard = ({ request }) => {
   const handleDecline = async () => {
     try {
       // Update request status to "rejected"
-      await editRequest(_id, { status: "rejected", messages: msg });
+      await editRequest(_id, { status: "rejected", message: msg });
       message.success("Request declined successfully");
     } catch (error) {
       message.error("Failed to decline request");

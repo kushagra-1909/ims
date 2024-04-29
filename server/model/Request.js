@@ -33,14 +33,10 @@ const requestSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
-  messages: [
-    {
-      message: {
-        type: String,
-        required: true,
-      },
-    },
-  ],
+  message: {
+    type: String,
+    default: "",
+  },
 });
 
 const Request = mongoose.model("Request", requestSchema);

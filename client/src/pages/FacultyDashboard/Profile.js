@@ -57,7 +57,11 @@ export const Profile = () => {
     try {
       if (response.status === "success") {
         message.success(response.message);
-        if (response.message2) message.success(response.message2);
+        if (response.message2) {
+          message.success(response.message2);
+        } else {
+          message.error("enter correct old password");
+        }
       } else {
         message.error("Error in API call");
       }
@@ -69,90 +73,93 @@ export const Profile = () => {
   return (
     <>
       <div className="profile-alignment">
-      <div>
-        <h1>Profile</h1>
-        <p>Username: {userDetails.username}</p>
-        <p>Email: {userDetails.email}</p>
-        <p>Department: {userDetails.department}</p>
-      </div>
-      <form onSubmit={handleSubmit}>
-      <div className="form-elements">
         <div>
-          <label htmlFor="username">Name:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-          />
+          <h1>Profile</h1>
+          <p>Username: {userDetails.username}</p>
+          <p>Email: {userDetails.email}</p>
+          <p>Department: {userDetails.department}</p>
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="department">Department:</label>
-          <input
-            type="text"
-            id="department"
-            name="department"
-            value={formData.department}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="change-password">
-          <button onClick={handleShowAdditionalInputs} type="button">
-            Change Password
-          </button>
-        </div>
-        {showAdditionalInputs && (
-          <>
+        <form onSubmit={handleSubmit}>
+          <div className="form-elements">
             <div>
-              <label htmlFor="old_password">Old Password:</label>
+              <label htmlFor="username">Name:</label>
               <input
-                type="password"
-                id="old_password"
-                name="old_password"
-                onChange={handleChange}
-                rules={[
-                  {
-                    required: true,
-                  },
-                ]}
-              />
-            </div>
-            <div>
-              <label htmlFor="new_password">New Password:</label>
-              <input
-                type="password"
-                id="new_password"
-                name="new_password"
-                rules={[
-                  {
-                    required: true,
-                  },
-                ]}
+                type="text"
+                id="username"
+                name="username"
+                value={formData.username}
                 onChange={handleChange}
               />
             </div>
-          </>
-        )}
-        <div className="more-buttons">
-        <button className="back-button" onClick={() => navigate(-1)} type="button">
-         Back
-        </button>
-        <button type="submit">Update</button>
-        </div>
-        </div>
-      </form>
-      
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="department">Department:</label>
+              <input
+                type="text"
+                id="department"
+                name="department"
+                value={formData.department}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="change-password">
+              <button onClick={handleShowAdditionalInputs} type="button">
+                Change Password
+              </button>
+            </div>
+            {showAdditionalInputs && (
+              <>
+                <div>
+                  <label htmlFor="old_password">Old Password:</label>
+                  <input
+                    type="password"
+                    id="old_password"
+                    name="old_password"
+                    onChange={handleChange}
+                    rules={[
+                      {
+                        required: true,
+                      },
+                    ]}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="new_password">New Password:</label>
+                  <input
+                    type="password"
+                    id="new_password"
+                    name="new_password"
+                    rules={[
+                      {
+                        required: true,
+                      },
+                    ]}
+                    onChange={handleChange}
+                  />
+                </div>
+              </>
+            )}
+            <div className="more-buttons">
+              <button
+                className="back-button"
+                onClick={() => navigate(-1)}
+                type="button"
+              >
+                Back
+              </button>
+              <button type="submit">Update</button>
+            </div>
+          </div>
+        </form>
       </div>
     </>
   );

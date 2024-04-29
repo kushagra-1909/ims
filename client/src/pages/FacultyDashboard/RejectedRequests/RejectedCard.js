@@ -3,13 +3,13 @@ import React from "react";
 import { PDFDocument } from "../PdfDownload";
 import "../../../StyleSheets/RejectedCard.css";
 
-const RejectedCard = ({ request }) => {
-  const { dateRequested, Items, message, createdBy } = request;
+const RejectedCard = ({ request, userDetails }) => {
+  const { dateRequested, Items, message } = request;
   return (
     <div className="rejected-request-card">
       <div>
-        <h3> {createdBy.username}</h3>
-        <h5>{createdBy.designation}</h5>
+        <h3> {userDetails?.username}</h3>
+        <h5>{userDetails?.designation}</h5>
       </div>
       <div>
         <p>Date: {new Date(dateRequested).toLocaleDateString()}</p>
@@ -38,6 +38,9 @@ const RejectedCard = ({ request }) => {
             ))}
           </ul>
         </div>
+      </div>
+      <div>
+        <span>Reason : {message}</span>
       </div>
       <div className="rejected-request-card-action-container">
         <PDFDownloadLink

@@ -45,6 +45,9 @@ const RejectedRequestCard = ({ request }) => {
           </ul>
         </div>
       </div>
+      <div>
+        <span>Reason : {message}</span>
+      </div>
       <div className="rejected-request-card-action-container">
         <PDFDownloadLink
           document={<PDFDocument Items={Items} />}

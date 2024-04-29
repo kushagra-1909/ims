@@ -3,13 +3,13 @@ import React from "react";
 import { PDFDocument } from "../PdfDownload";
 import "../../../StyleSheets/PendingCard.css";
 
-const PendingCard = ({ request }) => {
+const PendingCard = ({ request ,userDetails }) => {
   const { dateRequested, Items, createdBy } = request;
   return (
     <div className="pending-request-card">
       <div>
-        <h3> {createdBy?.username}</h3>
-        <h5>{createdBy?.designation}</h5>
+        <h3> {userDetails?.username}</h3>
+        <h5>{userDetails?.designation}</h5>
       </div>
       <div>
         <p>Date: {new Date(dateRequested).toLocaleDateString()}</p>

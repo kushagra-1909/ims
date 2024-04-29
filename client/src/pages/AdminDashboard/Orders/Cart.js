@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Form, message } from "antd";
-import {PlaceOrder} from "../../../apicalls/orders"
+import { PlaceOrder } from "../../../apicalls/orders";
 
 export const Cart = ({ orders, setOrder }) => {
-  
-  const placeOrder = async(id, val) => {
-    console.log("id:" ,id);
-    const payload= {supplierEmail: val.email}
-    console.log("val:" ,payload);
+  const placeOrder = async (id, val) => {
+    console.log("id:", id);
+    const payload = { supplierEmail: val.email };
+    console.log("val:", payload);
     try {
-      const response = await PlaceOrder(id,payload);
+      const response = await PlaceOrder(id, payload);
       if (response.status === "success") {
         message.success(response.message);
         message.success("email sent successfully");
@@ -39,7 +38,12 @@ export const Cart = ({ orders, setOrder }) => {
                       </li>
                     ))}
                   </ul>
-                  <Form layout="vertical" onFinish={(val)=>{placeOrder(order._id,val)}}>
+                  <Form
+                    layout="vertical"
+                    onFinish={(val) => {
+                      placeOrder(order._id, val);
+                    }}
+                  >
                     <Form.Item
                       label="Email"
                       name="email"
