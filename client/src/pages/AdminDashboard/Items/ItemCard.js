@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Form, message } from "antd";
 import { DeleteItem, UpdateItem } from "../../../apicalls/items";
+import {addToCart} from "../../../apicalls/orders"
 
-const ItemCard = ({ item }) => {
+const ItemCard = ({ item, userId }) => {
   const {
     _id,
     itemName,
@@ -43,7 +44,22 @@ const ItemCard = ({ item }) => {
     }
   };
 
-  const placeOrder = async (values) => {};
+  const AddToCart= async (values)=>{
+    
+    const payload= {userId: userId, itemId: _id, quantity: values.quantity};
+    console.log("payload",payload);
+    try {
+      const response = await addToCart(payload);
+      if (response.status === "success") {
+        message.success(response.message);
+      } else {
+        message.error("item add failed!!");
+      }
+    } catch (error) {
+      message.error(error.message);
+    }
+    setShowPlaceOrderForm(false);
+  }
 
   return (
     <div>
@@ -152,20 +168,7 @@ const ItemCard = ({ item }) => {
             className="place-order-wrapper"
           ></div>
           <div className="place-order-container">
-            <Form layout="vertical" onFinish={placeOrder}>
-              <Form.Item
-                label="Supplier Firm Name"
-                name="supplierName"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input supplier firm name",
-                  },
-                ]}
-              >
-                <input type="text" placeholder="Supplier name" />
-              </Form.Item>
-
+            <Form layout="vertical" onFinish={AddToCart}>
               <Form.Item
                 label="Quantity"
                 name="quantity"
