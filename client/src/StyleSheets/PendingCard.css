@@ -3,13 +3,12 @@
   justify-content: space-between;
   border: 1px solid #ccc;
   border-radius: 30px;
-  opacity: 0.9;
   box-shadow: -28px 18px 24.6px 1px rgba(48, 48, 48, 0.5);
   padding: 20px;
   color: white;
   margin-bottom: 20px;
 }
-.pending-request-card button{
+.pending-request-card button {
   background-color: #3e1adb;
   width: 150px;
   color: #fff;
@@ -19,7 +18,7 @@
   cursor: pointer;
   font-size: 17px;
 }
-.pending-request-card button:hover{
+.pending-request-card button:hover {
   background-color: white;
   color: black;
   cursor: pointer;
@@ -38,4 +37,35 @@
 .pending-request-card li {
   font-size: 14px;
   margin-bottom: 5px;
+}
+
+.pending-request-card-item-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pending-request-card-item-header div {
+  margin: 15px;
+  width: 50%;
+}
+
+.pending-request-card-item-header span {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.pending-request-items-content ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pending-request-items-content ul li div {
+  margin-right: 10px;
+  margin-left: 25px;
+  width: 50%;
+  display: flex;
+}
+
+.pending-request-items-content ul li div span {
+  margin-top: 5px;
 }

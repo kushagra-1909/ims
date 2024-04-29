@@ -49,7 +49,7 @@ body {
 }
 
 .decline-btn {
-  background-color: #F31313;
+  background-color: #f31313;
   color: #fff;
   border: none;
   border-radius: 30px;
@@ -128,10 +128,10 @@ body {
   margin-top: 20px;
   font-size: 17px;
 }
-.generate-pdf-button button:hover{
+.generate-pdf-button button:hover {
   background-color: white;
   color: black;
-  cursor:pointer;
+  cursor: pointer;
 }
 .requisition-color h2 {
   color: white;

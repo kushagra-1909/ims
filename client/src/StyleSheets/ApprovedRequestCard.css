@@ -1,25 +1,15 @@
 .approved-request-card {
-  /* display: flex;
+  display: flex;
   justify-content: space-between;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: lightgreen; */
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid #ccc;
-  border-radius: 30px;
-  box-shadow: -28px 18px 24.6px 1px rgba(48, 48, 48, 0.5);
-  padding: 20px;
-  color: white;
-  margin-bottom: 20px;
-  background-color:#013201   ;
-  
+  background-color: #013201;
 }
 
 .approved-request-card h3 {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -40,9 +30,7 @@
   margin-bottom: 5px;
 }
 
-.approved-request-card{
-  display: flex;
-}
+
 
 .approved-request-card-item-header {
   display: flex;
@@ -50,8 +38,7 @@
 }
 
 .approved-request-card-item-header div {
-  /* margin: 15px; */
-  margin-bottom: 20px;
+  margin: 15px;
   width: 25%;
 }
 
@@ -74,22 +61,4 @@
 
 .approved-request-items-content ul li div span {
   margin-top: 5px;
-}
-
-.approved-request-card-action-container button{
-   margin-top: 40px;
-   margin-right: 30px;
-   background-color: #3e1adb;
-   width: 150px;
-   color: #fff;
-   border: none;
-   border-radius: 5px;
-   padding: 5px 10px;
-   cursor: pointer;
-   font-size: 17px;
-}
-.approved-request-card-action-container button:hover{
-  background-color: white;
-  color: black;
-  cursor: pointer;
 }

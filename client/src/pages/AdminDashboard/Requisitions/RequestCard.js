@@ -143,7 +143,7 @@ const RequestCard = ({ request }) => {
                   <div>
                     <span>{item.item.safeDeposit}</span>
                   </div>
-                  <div>
+                  <div className="request-item-content-buttons">
                     {item.item.availableQuantity - item.quantityRequested <
                       item.item.safeDeposit && (
                       <button
