@@ -1,7 +1,16 @@
 .faculty-dashboard-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  background-color: black;
+  color: white;
+  height: 10vh;
+  
+}
+.faculty-dashboard-header h1{
+  margin-left: 20px;
+  margin-top: 18px;
+  font-size: 40px;
 }
 
 .faculty-dashboard-header div button {
@@ -17,14 +26,17 @@
   display: flex;
   justify-content: space-between;
   width: 50%;
+  margin-left: 20px;
 }
 
 .Request-status-nav button {
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
+  color: white;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -33,13 +45,24 @@ h1 {
 }
 
 .Pending {
-  background-color: skyblue;
+  background-color: #1A87F7;
 }
 
 .Approved {
-  background-color: palegreen;
+  background-color: green;
 }
 
 .Rejected {
-  background-color: palevioletred;
+  background-color: red;
+}
+.Request-status-nav button:hover{
+  color: black;
+  background-color: white;
+}
+.status-bar h1{
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  margin-left: 20px;
 }

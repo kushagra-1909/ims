@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { message } from "antd";
 import { requestItem } from "../../../apicalls/requests";
 import { GetAllItems } from "../../../apicalls/items";
+import("../../../StyleSheets/CreateNewRequest.css");
 
 function CreateNewRequest() {
   const [showForm, setShowForm] = useState(false);
@@ -69,19 +70,21 @@ function CreateNewRequest() {
 
   return (
     <div className="faculty-dashboard">
-      <button
-        style={{
-          padding: "10px",
-          color: "white",
-          borderRadius: "10px",
-          fontSize: "15px",
-          backgroundColor: "purple",
-          cursor: "pointer",
-        }}
+      <div className="request-button">
+      <button className=""
+        // style={{
+        //   padding: "10px",
+        //   color: "Black",
+        //   borderRadius: "10px",
+        //   fontSize: "15px",
+        //   backgroundColor: "orange",
+        //   cursor: "pointer",
+        // }}
         onClick={handleClick}
       >
         Create New Request
       </button>
+      </div>
       {showForm && (
         <div>
           <div

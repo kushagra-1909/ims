@@ -61,10 +61,12 @@ body {
 }
 
 .approve-btn:hover {
-  background-color: #8ff484;
+  background-color: white;
+  color: black;
 }
 .decline-btn:hover {
-  background-color: #ff7875;
+  background-color: white;
+  color: black;
 }
 
 .approve-btn:disabled,
@@ -125,6 +127,11 @@ body {
   margin-right: 10px;
   margin-top: 20px;
   font-size: 17px;
+}
+.generate-pdf-button button:hover{
+  background-color: white;
+  color: black;
+  cursor:pointer;
 }
 .requisition-color h2 {
   color: white;

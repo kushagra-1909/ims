@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { updateUser, GetLoggedInUserDetails } from "../../apicalls/users";
 import { message } from "antd";
+import "../../StyleSheets/profile.css";
 
 export const Profile = () => {
   const navigate = useNavigate();
@@ -67,13 +68,15 @@ export const Profile = () => {
 
   return (
     <>
+      <div className="profile-alignment">
       <div>
         <h1>Profile</h1>
-        <p>username: {userDetails.username}</p>
-        <p>email: {userDetails.email}</p>
-        <p>department: {userDetails.department}</p>
+        <p>Username: {userDetails.username}</p>
+        <p>Email: {userDetails.email}</p>
+        <p>Department: {userDetails.department}</p>
       </div>
       <form onSubmit={handleSubmit}>
+      <div className="form-elements">
         <div>
           <label htmlFor="username">Name:</label>
           <input
@@ -104,15 +107,15 @@ export const Profile = () => {
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div className="change-password">
           <button onClick={handleShowAdditionalInputs} type="button">
-            change password
+            Change Password
           </button>
         </div>
         {showAdditionalInputs && (
           <>
             <div>
-              <label htmlFor="old_password">old password</label>
+              <label htmlFor="old_password">Old Password:</label>
               <input
                 type="password"
                 id="old_password"
@@ -126,7 +129,7 @@ export const Profile = () => {
               />
             </div>
             <div>
-              <label htmlFor="new_password">new password</label>
+              <label htmlFor="new_password">New Password:</label>
               <input
                 type="password"
                 id="new_password"
@@ -141,11 +144,16 @@ export const Profile = () => {
             </div>
           </>
         )}
-        <button onClick={() => navigate(-1)} type="button">
-          Go back
+        <div className="more-buttons">
+        <button className="back-button" onClick={() => navigate(-1)} type="button">
+         Back
         </button>
         <button type="submit">Update</button>
+        </div>
+        </div>
       </form>
+      
+      </div>
     </>
   );
 };

@@ -1,0 +1,58 @@
+.profile-alignment {
+    color: white;
+    margin-left: 35vw;
+    margin-top: 10vh;
+    width:32vw;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    
+}
+.profile-alignment h1{
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+.profile-alignment p{
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.form-elements div{
+    margin-bottom: 10px;
+    font-size: 30px;
+
+}
+.form-elements input{
+    border: 5.357px solid #00bcf8;
+    box-shadow: 3.571px 5.357px 14.553px 0px rgba(0, 0, 0, 0.5);
+    width: 20vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 28px;
+}
+.change-password button{
+    background-color: #1A87F7;
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  width: 10vw;
+  height: 5vh;
+}
+.change-password button:hover{
+    background-color: white;
+    color: black;
+    cursor:pointer;
+}
+.more-buttons button{
+    background-color: orange;
+    width: 7vw;
+    height: 4vh;
+    border-radius: 20px;
+}
+.more-buttons button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.back-button{
+    margin-right: 17vw;
+}

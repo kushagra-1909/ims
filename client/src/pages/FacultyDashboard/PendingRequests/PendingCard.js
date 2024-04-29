@@ -1,6 +1,7 @@
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import React from "react";
 import { PDFDocument } from "../PdfDownload";
+import "../../../StyleSheets/PendingCard.css";
 
 const PendingCard = ({ request }) => {
   const { dateRequested, Items } = request;

@@ -2,12 +2,28 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 30px;
+  box-shadow: -28px 18px 24.6px 1px rgba(48, 48, 48, 0.5);
   padding: 20px;
+  color: white;
   margin-bottom: 20px;
-  background-color: lightgreen;
+  background-color:#013201   ;
 }
-
+.approved-request-card button{
+  background-color: #3e1adb;
+   width: 150px;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   padding: 5px 10px;
+   cursor: pointer;
+   font-size: 17px;
+}
+.approved-request-card button:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
 .approved-request-card p {
   font-size: 14px;
   margin-bottom: 10px;

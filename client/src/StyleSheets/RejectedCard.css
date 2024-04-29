@@ -1,25 +1,42 @@
-.request-card {
+.request-card-declined {
   display: flex;
   justify-content: space-between;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 30px;
+  box-shadow: -28px 18px 24.6px 1px rgba(48, 48, 48, 0.5);
   padding: 20px;
+  background-color:  #8C0404  ; 
+  color: white;
   margin-bottom: 20px;
-  background-color: #f9f9f9;
+}
+.request-card-declined button{
+  background-color: #3e1adb;
+   width: 150px;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   padding: 5px 10px;
+   cursor: pointer;
+   font-size: 17px;
+}
+.request-card-declined button:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
-.request-card p {
+.request-card-declined p {
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-.request-card ul {
+.request-card-declined ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.request-card li {
+.request-card-declined li {
   font-size: 14px;
   margin-bottom: 5px;
 }

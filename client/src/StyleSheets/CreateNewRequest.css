@@ -2,7 +2,17 @@
 .faculty-dashboard {
   text-align: center; /* Center content horizontally */
 }
-
+.request-button button{
+          padding: 10px;
+          color: Black;
+          border-radius: 10px;
+          font-size: 15px;
+          background-color: orange;
+          cursor: pointer;
+}
+.request-button button:hover{
+color:white;
+}
 .request-form {
   background-color: #f5f5f5;
   padding: 20px;

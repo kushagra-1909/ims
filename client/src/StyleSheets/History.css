@@ -11,3 +11,8 @@
   color: white;
   font-size: 20px;
 }
+.History-nav button:hover{
+    background-color: white;
+  color: black;
+  cursor: pointer;
+}

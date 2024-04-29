@@ -67,7 +67,7 @@ const FacultyDashboard = () => {
           <ProfileButton userDetails={userDetails} />
         </div>
       </div>
-      <div>
+      <div className="status-bar">
         <CreateNewRequest />
         <h1>Request Status</h1>
         <div className="Request-status-nav">

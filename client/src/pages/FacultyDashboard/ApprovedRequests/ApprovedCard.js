@@ -1,11 +1,12 @@
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import React from "react";
 import { PDFDocument } from "../PdfDownload";
+import "../../../StyleSheets/ApprovedCard.css";
 
 const ApprovedCard = ({ request }) => {
   const { dateRequested, Items } = request;
   return (
-    <div className="request-card">
+    <div className="approved-request-card">
       <p>Date: {new Date(dateRequested).toLocaleDateString()}</p>
       <p>Time: {new Date(dateRequested).toLocaleTimeString()}</p>
       <ul>

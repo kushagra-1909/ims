@@ -1,11 +1,12 @@
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import React from "react";
 import { PDFDocument } from "../PdfDownload";
+import "../../../StyleSheets/RejectedCard.css";
 
 const RejectedCard = ({ request }) => {
   const { dateRequested, Items, message } = request;
   return (
-    <div className="request-card">
+    <div className="request-card-declined">
       <p>Date: {new Date(dateRequested).toLocaleDateString()}</p>
       <ul>
         {Items.map((item, index) => (
