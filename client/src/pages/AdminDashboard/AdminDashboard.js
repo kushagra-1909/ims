@@ -60,10 +60,10 @@ const AdminDashboard = () => {
           <button onClick={() => setActiveSection("orders")}>Orders</button>
         </div>
         {activeSection === "requisition" && <Requisition />}
-        {activeSection === "items" && <Items />}
+        {activeSection === "items" && <Items userId={userDetails._id}/>}
         {activeSection === "users" && <Users />}
         {activeSection === "history" && <History />}
-        {activeSection === "orders" && <Orders />}
+        {activeSection === "orders" && <Orders userDetails={userDetails}/>}
       </div>
     </div>
   );

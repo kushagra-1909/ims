@@ -4,7 +4,7 @@ import { Form, message } from "antd";
 import ItemCard from "./ItemCard";
 import("../../../StyleSheets/itemsCard.css");
 
-const Items = () => {
+const Items = ({userId}) => {
   const [showForm, setShowForm] = useState(false);
   const [allitems, setAllItems] = useState([]);
 
@@ -198,7 +198,7 @@ const Items = () => {
 
       <div className="Item-cards">
         {allitems.map((item) => (
-          <ItemCard key={item._id} item={item} />
+          <ItemCard key={item._id} item={item} userId={userId} />
         ))}
       </div>
     </div>
