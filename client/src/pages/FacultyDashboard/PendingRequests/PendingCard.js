@@ -4,7 +4,7 @@ import { PDFDocument } from "../PdfDownload";
 import "../../../StyleSheets/PendingCard.css";
 
 const PendingCard = ({ request ,userDetails }) => {
-  const { dateRequested, Items, createdBy } = request;
+  const { dateRequested, Items } = request;
   return (
     <div className="pending-request-card">
       <div>

@@ -6,7 +6,7 @@ import History from "./History/History";
 import Orders from "./Orders/Orders";
 import "../../StyleSheets/Items.css";
 import "../../StyleSheets/Users.css";
-import { useNavigate } from "react-router-dom";
+import "../../StyleSheets/Orders.css"
 import { GetLoggedInUserDetails } from "../../apicalls/users";
 import { message } from "antd";
 import { ProfileButton } from "../FacultyDashboard/ProfileButton";
@@ -14,13 +14,7 @@ import { ProfileButton } from "../FacultyDashboard/ProfileButton";
 const AdminDashboard = () => {
   // State variable to manage active section
   const [activeSection, setActiveSection] = useState("requisition");
-  const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({});
-
-  const logout = () => {
-    localStorage.removeItem("token");
-    navigate("/");
-  };
 
   const fetchLoginUserDetails = async () => {
     try {

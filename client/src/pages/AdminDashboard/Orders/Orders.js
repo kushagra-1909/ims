@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Form, message } from "antd";
+import { message } from "antd";
 import { getOrders } from "../../../apicalls/orders";
 import { OrderHistory } from "./OrderHistory";
 import { Cart } from "./Cart";
+import "../../../StyleSheets/OrderHistory.css";
+import "../../../StyleSheets/Cart.css";
 
 const Orders = ({ userDetails }) => {
   const [order, setOrder] = useState([]);
@@ -27,18 +29,15 @@ const Orders = ({ userDetails }) => {
   }, []);
   useEffect(() => {
     setOrder(order);
-  },[]);
+  }, []);
 
   return (
-    <>
-      <button onClick={()=>(setActiveSection("cart"))}>cart</button>
-      <button onClick={()=>(setActiveSection("history"))}>order history</button>
-
-      {activeSection === "cart" && <Cart orders={order} setOrder={setOrder}/>}
-      {activeSection === "history" && <OrderHistory orders={order}/>}
-
-      
-    </>
+    <div className="order-header">
+      <button onClick={() => setActiveSection("cart")}>cart</button>
+      <button onClick={() => setActiveSection("history")}>order history</button>
+      {activeSection === "cart" && <Cart orders={order} setOrder={setOrder} />}
+      {activeSection === "history" && <OrderHistory orders={order} />}
+    </div>
   );
 };
 

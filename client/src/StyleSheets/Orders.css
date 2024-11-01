@@ -1,0 +1,8 @@
+.order-header button {
+  background-color: blue;
+  color: white;
+  font-size: 25 px;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+}

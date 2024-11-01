@@ -13,8 +13,6 @@ const UserCard = ({ user }) => {
       const response = await deleteUser(_id);
       if (response.status === "success") {
         message.success("user deleted successfully");
-      } else {
-        message.error("User not deleted");
       }
     } catch (error) {
       message.error(error.message);

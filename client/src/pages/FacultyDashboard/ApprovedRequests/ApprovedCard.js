@@ -4,7 +4,7 @@ import { PDFDocument } from "../PdfDownload";
 import "../../../StyleSheets/ApprovedCard.css";
 
 const ApprovedCard = ({ request, userDetails }) => {
-  const { dateRequested, Items, createdBy } = request;
+  const { dateRequested, Items } = request;
   return (
     <div className="approved-request-card">
       <div>
@@ -48,7 +48,7 @@ const ApprovedCard = ({ request, userDetails }) => {
       <div className="approved-request-card-action-container">
         <PDFDownloadLink
           document={<PDFDocument Items={Items} />}
-          fileName="userRequestDetail"
+          fileName="{userDetails?.username}-requisitions-Detail"
         >
           <button className="download-pdf">Download PDF</button>
         </PDFDownloadLink>

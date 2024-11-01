@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Form, message } from "antd";
 import { PlaceOrder } from "../../../apicalls/orders";
 
 export const Cart = ({ orders, setOrder }) => {
   const placeOrder = async (id, val) => {
-    console.log("id:", id);
     const payload = { supplierEmail: val.email };
-    console.log("val:", payload);
     try {
       const response = await PlaceOrder(id, payload);
       if (response.status === "success") {
@@ -21,7 +19,7 @@ export const Cart = ({ orders, setOrder }) => {
   };
 
   return (
-    <>
+    <div className="cart-content">
       <h1>Cart</h1>
       {orders.length > 0 && (
         <div>
@@ -67,6 +65,6 @@ export const Cart = ({ orders, setOrder }) => {
           )}
         </div>
       )}
-    </>
+    </div>
   );
 };

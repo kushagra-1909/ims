@@ -1,14 +1,14 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
-require("./config/dbConnect");
+require("./server/config/dbConnect");
 const PORT = 9000;
 
-const usersRoute = require("./routes/usersRoute");
-const itemsRoute = require("./routes/itemsRoute");
-const requestsRoute = require("./routes/requestsRoute");
-const orderRoute = require("./routes/orderRoute");
-const globalErrhandler = require("./middlewares/globalErrHandler");
+const usersRoute = require("./server/routes/usersRoute");
+const itemsRoute = require("./server/routes/itemsRoute");
+const requestsRoute = require("./server/routes/requestsRoute");
+const orderRoute = require("./server/routes/orderRoute");
+const globalErrhandler = require("./server/middlewares/globalErrHandler");
 
 app.use("/api/users", usersRoute);
 app.use("/api/items", itemsRoute);

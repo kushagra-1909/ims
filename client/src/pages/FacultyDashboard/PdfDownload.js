@@ -61,7 +61,7 @@ const Table = ({ data }) => (
     {data.map((row, index) => (
       <View key={index} style={styles.tableRow}>
         <Text style={styles.cell}>{index + 1}</Text>
-        <Text style={styles.cell}>{row.item.itemName}</Text>
+        <Text style={styles.cell}>{row.item?.itemName}</Text>
         <Text style={styles.cell}>{row.quantityRequested}</Text>
         <Text style={styles.cell}>{row.quantityApproved}</Text>
       </View>

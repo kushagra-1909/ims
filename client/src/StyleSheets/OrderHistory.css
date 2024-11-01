@@ -1,0 +1,31 @@
+.order-content {
+  color: white;
+}
+
+.order-detail-container {
+  margin: 10px;
+  border: solid 1px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.order-item-detail {
+  display: flex;
+}
+.order-item-detail div {
+  display: flex;
+  margin: 5px;
+}
+
+.order-item-list ul{
+  list-style-type: none;
+}
+
+.order-item-list ul li div{
+  margin: 5px;
+}
+
+.itemname-quantity-details{
+  display: flex;
+}
